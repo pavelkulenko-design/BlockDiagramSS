@@ -29,6 +29,9 @@ namespace BlockDiagramSS
             ViewSelector.DisplayMemberPath = "Name";
         }
 
+
+
+
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             var view = ViewSelector.SelectedItem as ViewDrafting;
