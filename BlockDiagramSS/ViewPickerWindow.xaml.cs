@@ -7,6 +7,7 @@ namespace BlockDiagramSS
 {
     public partial class ViewPickerWindow : Window
     {
+        // TODO
         public ElementId SelectedViewId { get; private set; }
         public double StepMm { get; private set; }
         public double VerticalOffsetMm { get; private set; }
@@ -17,6 +18,7 @@ namespace BlockDiagramSS
         {
             InitializeComponent();
 
+            // Это бизнес логика плагина, надо вынести в слой Model
             var views = new FilteredElementCollector(doc)
                 .OfClass(typeof(ViewDrafting))
                 .Cast<ViewDrafting>()
