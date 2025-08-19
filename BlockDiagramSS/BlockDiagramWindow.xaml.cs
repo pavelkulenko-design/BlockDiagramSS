@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace BlockDiagramSS
 {
-    public partial class ViewPickerWindow : Window
+    public partial class BlockDiagramWindow : Window
     {
         // TODO
         public ElementId SelectedViewId { get; private set; }
@@ -14,7 +14,7 @@ namespace BlockDiagramSS
         public double LineLengthMm { get; private set; }
         public string CircuitFilter { get; private set; }
 
-        public ViewPickerWindow(Document doc)
+        public BlockDiagramWindow(Document doc)
         {
             InitializeComponent();
 

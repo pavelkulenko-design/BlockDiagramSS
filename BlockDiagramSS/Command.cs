@@ -18,7 +18,7 @@ namespace BlockDiagramSS
             Document doc = uidoc.Document;
 
             // Окно выбора параметров
-            ViewPickerWindow window = new ViewPickerWindow(doc);
+            BlockDiagramWindow window = new BlockDiagramWindow(doc);
             if (window.ShowDialog() != true)
                 return Result.Cancelled;
 

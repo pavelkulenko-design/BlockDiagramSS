@@ -58,12 +58,12 @@
     <Compile Include="App.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewPickerWindow.xaml.cs">
-      <DependentUpon>ViewPickerWindow.xaml</DependentUpon>
+    <Compile Include="BlockDiagramWindow.xaml.cs">
+      <DependentUpon>BlockDiagramWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ViewPickerWindow.xaml">
+    <Page Include="BlockDiagramWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
