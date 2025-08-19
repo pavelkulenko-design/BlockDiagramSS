@@ -25,7 +25,9 @@ namespace BlockDiagramSS
                 .OrderBy(v => v.Name)
                 .ToList();
 
+            // Тут наполняется твой ComboBox
             ViewSelector.ItemsSource = views;
+            // Тут определяется какое свойство из ViewDrafting будет отображаться в ComboBox
             ViewSelector.DisplayMemberPath = "Name";
         }
 
