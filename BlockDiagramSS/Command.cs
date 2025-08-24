@@ -1,9 +1,8 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Electrical;
 using Autodesk.Revit.UI;
 using System;
-using Autodesk.Revit.DB.Electrical;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace BlockDiagramSS
