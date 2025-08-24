@@ -1,10 +1,11 @@
 ﻿using Autodesk.Revit.DB;
-using Autodesk.Revit.DB.Electrical;
 using System.Linq;
 using System.Windows;
 
 namespace BlockDiagramSS
 {
+    // Ветка для работы с багами
+    // После устранения багов объеденить с веткой master
     public partial class ViewPickerWindow : Window
     {
         public ElementId SelectedViewId { get; private set; }
@@ -13,15 +14,23 @@ namespace BlockDiagramSS
         public double LineLengthMm { get; private set; }
         public string CircuitFilter { get; private set; }
 
+        /// <summary>
+        /// Конструктор класса который создает окно
+        /// </summary>
+        /// <param name="doc"></param>
         public ViewPickerWindow(Document doc)
         {
             InitializeComponent();
 
+            // Вот эту часть кода в идеале вынести из конструктора окна так как она относится к бизнес-логике плагина. 
+            // Для полного понимания изучить архитектурный паттерн MVVM
+            #region Вынести из конструктора окна
             var views = new FilteredElementCollector(doc)
                 .OfClass(typeof(ViewDrafting))
                 .Cast<ViewDrafting>()
                 .OrderBy(v => v.Name)
                 .ToList();
+            #endregion
 
             ViewSelector.ItemsSource = views;
             ViewSelector.DisplayMemberPath = "Name";
