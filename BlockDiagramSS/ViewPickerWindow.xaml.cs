@@ -24,11 +24,13 @@ namespace BlockDiagramSS
 
             // Вот эту часть кода в идеале вынести из конструктора окна так как она относится к бизнес-логике плагина. 
             // Для полного понимания изучить архитектурный паттерн MVVM
+            #region Вынести из конструктора окна
             var views = new FilteredElementCollector(doc)
                 .OfClass(typeof(ViewDrafting))
                 .Cast<ViewDrafting>()
                 .OrderBy(v => v.Name)
                 .ToList();
+            #endregion
 
             ViewSelector.ItemsSource = views;
             ViewSelector.DisplayMemberPath = "Name";
