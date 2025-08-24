@@ -4,6 +4,8 @@ using System.Windows;
 
 namespace BlockDiagramSS
 {
+    // Ветка для работы с багами
+    // После устранения багов объеденить с веткой master
     public partial class ViewPickerWindow : Window
     {
         public ElementId SelectedViewId { get; private set; }
